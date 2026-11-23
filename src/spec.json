@@ -175,7 +175,7 @@
         [
           "Rete Lumo",
           "Prendere atto della graduatoria",
-          "12/04/2026",
+          "15/06/2026",
           "In ritardo",
           "Confrontare graduatoria e scheda progetto",
           "Coordinamento"
@@ -183,7 +183,7 @@
         [
           "Percorsi Vela",
           "Definire l'impegno di cofinanziamento",
-          "18/04/2026",
+          "30/06/2026",
           "In corso",
           "Verificare gli importi per ciascun anno",
           "Ufficio progetti"
@@ -191,7 +191,7 @@
         [
           "Comunità Nubi",
           "Preparare la gara per i servizi",
-          "22/04/2026",
+          "15/09/2026",
           "Da avviare",
           "Completare descrizione e tempi del servizio",
           "Ufficio progetti"
@@ -199,7 +199,7 @@
         [
           "Spazi Lirio",
           "Aggiornare il monitoraggio",
-          "05/05/2026",
+          "31/12/2026",
           "In corso",
           "Confrontare attività previste e svolte",
           "Coordinamento"
@@ -207,10 +207,58 @@
         [
           "Trame Sera",
           "Preparare la rendicontazione",
-          "14/05/2026",
+          "31/03/2027",
           "Da avviare",
           "Raccogliere prove di spesa e attività",
           "Ufficio progetti"
+        ],
+        [
+          "Rete Lumo",
+          "Avviare le attività e gli acquisti previsti",
+          "30/06/2027",
+          "Da avviare",
+          "Verificare l'avanzamento del primo anno",
+          "Ufficio progetti"
+        ],
+        [
+          "Percorsi Vela",
+          "Completare il monitoraggio intermedio",
+          "30/09/2027",
+          "Da avviare",
+          "Confrontare risultati e obiettivi",
+          "Coordinamento"
+        ],
+        [
+          "Comunità Nubi",
+          "Verificare gli affidamenti e le attività del secondo anno",
+          "31/12/2027",
+          "Da avviare",
+          "Controllare atti e documentazione",
+          "Ufficio progetti"
+        ],
+        [
+          "Spazi Lirio",
+          "Completare il monitoraggio del secondo anno",
+          "31/03/2028",
+          "Da avviare",
+          "Verificare attività e risultati raggiunti",
+          "Coordinamento"
+        ],
+        [
+          "Trame Sera",
+          "Preparare la rendicontazione finale",
+          "30/06/2028",
+          "Da avviare",
+          "Raccogliere prove di spesa e attività",
+          "Ufficio progetti"
+        ],
+        [
+          "Rete Lumo",
+          "Concludere le attività e verificare gli obiettivi",
+          "31/12/2028",
+          "Da avviare",
+          "Confrontare risultati finali e piano approvato",
+          "Coordinamento"
         ]
       ],
       "form": [
@@ -528,10 +576,249 @@
           }
         ]
       }
+    },
+    {
+      "id": "riferimenti-normativi",
+      "title": "Riferimenti normativi",
+      "description": "Registra le norme da consultare per ciascun progetto e segui l’ambito e lo stato della verifica.",
+      "metrics": [
+        {
+          "label": "Riferimenti registrati",
+          "value": "6"
+        },
+        {
+          "label": "Verifiche da completare",
+          "value": "4"
+        }
+      ],
+      "columns": [
+        "Progetto",
+        "Riferimento normativo",
+        "Ambito",
+        "Stato verifica"
+      ],
+      "rows": [
+        [
+          "Rete Lumo",
+          "Regolamento (UE) 2021/1060 del Parlamento europeo e del Consiglio",
+          "Gestione dei fondi e controlli",
+          "Da verificare"
+        ],
+        [
+          "Rete Lumo",
+          "Legge 7 agosto 1990, n. 241",
+          "Procedimento amministrativo",
+          "In verifica"
+        ],
+        [
+          "Percorsi Vela",
+          "Decreto legislativo 23 giugno 2011, n. 118",
+          "Programmazione e rendicontazione",
+          "Da verificare"
+        ],
+        [
+          "Comunità Nubi",
+          "Decreto legislativo 31 marzo 2023, n. 36",
+          "Affidamento dei servizi",
+          "Verificato"
+        ],
+        [
+          "Spazi Lirio",
+          "Decreto legislativo 18 agosto 2000, n. 267",
+          "Competenze e gestione dell’ente",
+          "In verifica"
+        ],
+        [
+          "Trame Sera",
+          "Regolamento (UE) 2021/1059 del Parlamento europeo e del Consiglio",
+          "Cooperazione territoriale europea",
+          "Da verificare"
+        ]
+      ],
+      "form": [
+        "Progetto",
+        "Riferimento normativo",
+        "Ambito",
+        "Stato verifica"
+      ],
+      "statusColumn": 3
+    },
+    {
+      "id": "bando-ipa-veneto",
+      "title": "Bando IPA Veneto — agosto 2026",
+      "description": "Scadenze con semaforo calcolato dalla data, filtri, calendario mensile e ricorrenze. Dati di esempio inventati.",
+      "metrics": [],
+      "columns": [
+        "Descrizione",
+        "Data",
+        "Ufficio",
+        "Responsabile",
+        "Riferimento normativo",
+        "Ricorrenza",
+        "Completata"
+      ],
+      "rows": [
+        [
+          "Verificare requisiti e soggetti ammissibili del bando IPA Veneto — esempio da verificare sul bando ufficiale.",
+          "15/08/2026",
+          "Segreteria",
+          "Bianchi",
+          "articolo 6 del decreto-legge 9 giugno 2021, n. 80",
+          "ogni anno",
+          "—"
+        ],
+        [
+          "Preparare la proposta progettuale e il quadro delle attività — esempio",
+          "20/08/2026",
+          "Segreteria",
+          "Bianchi",
+          "articolo 1, comma 14, della legge 6 novembre 2012, n. 190",
+          "ogni anno",
+          "—"
+        ],
+        [
+          "Raccogliere gli atti di partenariato e le dichiarazioni — esempio",
+          "25/08/2026",
+          "Ragioneria",
+          "Verdi",
+          "articolo 227 del decreto legislativo 18 agosto 2000, n. 267",
+          "ogni anno",
+          "—"
+        ],
+        [
+          "Controllare budget, cofinanziamento e allegati richiesti — esempio",
+          "28/08/2026",
+          "Ragioneria",
+          "Verdi",
+          "articolo 193 del decreto legislativo 18 agosto 2000, n. 267",
+          "ogni anno",
+          "—"
+        ],
+        [
+          "Verificare la procedura di invio e conservare la ricevuta — esempio",
+          "31/08/2026",
+          "Ragioneria",
+          "Neri",
+          "—",
+          "nessuna",
+          "—"
+        ],
+        [
+          "Aggiornamento della sezione Amministrazione trasparente",
+          "+6",
+          "Segreteria",
+          "Gallo",
+          "decreto legislativo 14 marzo 2013, n. 33",
+          "nessuna",
+          "—"
+        ],
+        [
+          "Invio del conto annuale del personale",
+          "+45",
+          "Personale",
+          "Rizzi",
+          "—",
+          "nessuna",
+          "—"
+        ],
+        [
+          "Piano delle ferie del personale",
+          "+28",
+          "Personale",
+          "Rizzi",
+          "—",
+          "nessuna",
+          "—"
+        ],
+        [
+          "Rinnovo della convenzione per la mensa scolastica",
+          "+60",
+          "Servizi sociali",
+          "Conti",
+          "—",
+          "nessuna",
+          "—"
+        ],
+        [
+          "Censimento delle autorizzazioni paesaggistiche",
+          "+90",
+          "Tecnico",
+          "Marino",
+          "—",
+          "nessuna",
+          "—"
+        ],
+        [
+          "Verifica degli impianti antincendio delle scuole",
+          "+15",
+          "Tecnico",
+          "Marino",
+          "—",
+          "nessuna",
+          "—"
+        ],
+        [
+          "Relazione sulla performance",
+          "+38",
+          "Segreteria",
+          "Bianchi",
+          "articolo 10 del decreto legislativo 27 ottobre 2009, n. 150",
+          "ogni anno",
+          "—"
+        ],
+        [
+          "Comunicazione dei dati delle gare",
+          "+2",
+          "Ragioneria",
+          "Neri",
+          "—",
+          "nessuna",
+          "—"
+        ],
+        [
+          "Revisione dell'albo dei presidenti di seggio",
+          "+75",
+          "Demografici",
+          "Ferri",
+          "—",
+          "nessuna",
+          "—"
+        ],
+        [
+          "Aggiornamento del registro dei trattamenti dei dati",
+          "+33",
+          "Segreteria",
+          "Gallo",
+          "—",
+          "nessuna",
+          "—"
+        ]
+      ],
+      "form": [],
+      "kind": "deadlines",
+      "deadlines": {
+        "dateColumn": 1,
+        "descriptionColumn": 0,
+        "officeColumn": 2,
+        "ownerColumn": 3,
+        "normColumn": 4,
+        "recurrenceColumn": 5,
+        "completedColumn": 6
+      }
     }
   ],
   "theme": {
     "palette": "prugna",
     "fonts": "editoriale"
-  }
+  },
+  "custom": [
+    {
+      "name": "GanttTriennale",
+      "title": "Gantt ipotetico 2026–2028",
+      "description": "Cronoprogramma filtrabile con durate indicative e apertura dei dettagli delle attività.",
+      "role": "section",
+      "pageId": "scadenze-e-controlli",
+      "position": "top"
+    }
+  ]
 }
