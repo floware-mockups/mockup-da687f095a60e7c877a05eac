@@ -1,0 +1,311 @@
+{
+  "title": "Avvio e monitoraggio dei progetti",
+  "description": "Tieni in ordine le scadenze e i documenti dei progetti di cooperazione. La dashboard mette in evidenza gli avvii in ritardo e i controlli da fare.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "dashboard",
+      "title": "Riepilogo progetti",
+      "description": "Controlla gli avvii, le prossime scadenze e i documenti da preparare.",
+      "metrics": [
+        {
+          "label": "Progetti in corso",
+          "value": "5"
+        },
+        {
+          "label": "Avvii in ritardo",
+          "value": "2"
+        },
+        {
+          "label": "Scadenze nei prossimi 30 giorni",
+          "value": "4"
+        },
+        {
+          "label": "Controlli da fare",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Progetto",
+        "Fase",
+        "Stato",
+        "Prossima scadenza",
+        "Controllo da fare"
+      ],
+      "rows": [
+        [
+          "Rete Lumo",
+          "Presa d'atto della graduatoria",
+          "In ritardo",
+          "12/04/2026",
+          "Verificare i documenti della graduatoria"
+        ],
+        [
+          "Percorsi Vela",
+          "Impegno di spesa",
+          "In corso",
+          "18/04/2026",
+          "Controllare il cofinanziamento"
+        ],
+        [
+          "Comunità Nubi",
+          "Affidamento servizi",
+          "Da avviare",
+          "22/04/2026",
+          "Preparare gli atti di gara"
+        ],
+        [
+          "Spazi Lirio",
+          "Monitoraggio",
+          "In corso",
+          "05/05/2026",
+          "Aggiornare le attività svolte"
+        ],
+        [
+          "Trame Sera",
+          "Rendicontazione",
+          "Da avviare",
+          "14/05/2026",
+          "Raccogliere le prove di spesa"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "registro-progetti",
+      "title": "Registro progetti",
+      "description": "Cerca un progetto e filtra per stato. Aggiungi una voce per seguire le attività dall'approvazione alla chiusura.",
+      "metrics": [],
+      "columns": [
+        "Progetto",
+        "Ente coordinatore",
+        "Partner",
+        "Fase",
+        "Stato",
+        "Prossima scadenza",
+        "Documenti pronti",
+        "Controllo"
+      ],
+      "rows": [
+        [
+          "Rete Lumo",
+          "Comune di Fonteluce",
+          "Comuni di Fonteluce e Rivadoro; Cantiere Nubi, Officina Vela, Trama Lirio",
+          "Presa d'atto della graduatoria",
+          "In ritardo",
+          "12/04/2026",
+          "Graduatoria; schema di presa d'atto",
+          "Confermare i documenti prima dell'avvio"
+        ],
+        [
+          "Percorsi Vela",
+          "Comune di Rivadoro",
+          "Comuni di Rivadoro e Fonteluce; Officina Vela, Cantiere Nubi, Trama Lirio",
+          "Impegno di spesa",
+          "In corso",
+          "18/04/2026",
+          "Quadro di cofinanziamento; bozza di impegno",
+          "Verificare gli importi per i tre anni"
+        ],
+        [
+          "Comunità Nubi",
+          "Comune di Fonteluce",
+          "Comuni di Fonteluce e Rivadoro; Cantiere Nubi, Officina Vela, Trama Lirio",
+          "Affidamento servizi",
+          "Da avviare",
+          "22/04/2026",
+          "Descrizione del servizio; elenco dei requisiti",
+          "Preparare gli atti di gara"
+        ],
+        [
+          "Spazi Lirio",
+          "Comune di Rivadoro",
+          "Comuni di Rivadoro e Fonteluce; Cantiere Nubi, Officina Vela, Trama Lirio",
+          "Monitoraggio",
+          "In corso",
+          "05/05/2026",
+          "Calendario attività; scheda di avanzamento",
+          "Aggiornare attività e risultati"
+        ],
+        [
+          "Trame Sera",
+          "Comune di Fonteluce",
+          "Comuni di Fonteluce e Rivadoro; Cantiere Nubi, Officina Vela, Trama Lirio",
+          "Rendicontazione",
+          "Da avviare",
+          "14/05/2026",
+          "Elenco spese; schema di rendiconto",
+          "Raccogliere le prove di spesa"
+        ]
+      ],
+      "form": [
+        "Progetto",
+        "Ente coordinatore",
+        "Partner",
+        "Fase",
+        "Stato",
+        "Prossima scadenza",
+        "Documenti pronti",
+        "Controllo"
+      ]
+    },
+    {
+      "id": "scadenze-e-controlli",
+      "title": "Scadenze e controlli",
+      "description": "Vedi cosa fare prima e quali verifiche completare per non rallentare l'avvio.",
+      "metrics": [
+        {
+          "label": "Scadenze entro 7 giorni",
+          "value": "2"
+        },
+        {
+          "label": "Verifiche aperte",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Progetto",
+        "Attività",
+        "Scadenza",
+        "Stato",
+        "Controllo",
+        "Referente di ufficio"
+      ],
+      "rows": [
+        [
+          "Rete Lumo",
+          "Prendere atto della graduatoria",
+          "12/04/2026",
+          "In ritardo",
+          "Confrontare graduatoria e scheda progetto",
+          "Coordinamento"
+        ],
+        [
+          "Percorsi Vela",
+          "Definire l'impegno di cofinanziamento",
+          "18/04/2026",
+          "In corso",
+          "Verificare gli importi per ciascun anno",
+          "Ufficio progetti"
+        ],
+        [
+          "Comunità Nubi",
+          "Preparare la gara per i servizi",
+          "22/04/2026",
+          "Da avviare",
+          "Completare descrizione e tempi del servizio",
+          "Ufficio progetti"
+        ],
+        [
+          "Spazi Lirio",
+          "Aggiornare il monitoraggio",
+          "05/05/2026",
+          "In corso",
+          "Confrontare attività previste e svolte",
+          "Coordinamento"
+        ],
+        [
+          "Trame Sera",
+          "Preparare la rendicontazione",
+          "14/05/2026",
+          "Da avviare",
+          "Raccogliere prove di spesa e attività",
+          "Ufficio progetti"
+        ]
+      ],
+      "form": [
+        "Progetto",
+        "Attività",
+        "Scadenza",
+        "Stato",
+        "Controllo",
+        "Referente di ufficio"
+      ]
+    },
+    {
+      "id": "documenti-pronti",
+      "title": "Documenti pronti",
+      "description": "Segui i documenti da preparare per graduatoria, spesa, gara, attività e rendiconto.",
+      "metrics": [
+        {
+          "label": "Documenti da preparare",
+          "value": "6"
+        },
+        {
+          "label": "Pronti per il controllo",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Progetto",
+        "Fase",
+        "Documento",
+        "Stato",
+        "Da completare entro",
+        "Controllo richiesto"
+      ],
+      "rows": [
+        [
+          "Rete Lumo",
+          "Graduatoria",
+          "Elenco documenti e scheda di presa d'atto",
+          "Da completare",
+          "12/04/2026",
+          "Confermare i dati della graduatoria"
+        ],
+        [
+          "Percorsi Vela",
+          "Cofinanziamento",
+          "Prospetto dell'impegno per tre anni",
+          "Da controllare",
+          "18/04/2026",
+          "Verificare importi e annualità"
+        ],
+        [
+          "Comunità Nubi",
+          "Affidamento servizi",
+          "Descrizione del servizio e atti di gara",
+          "Da preparare",
+          "22/04/2026",
+          "Controllare attività, tempi e requisiti"
+        ],
+        [
+          "Spazi Lirio",
+          "Attività di progetto",
+          "Calendario attività e scheda di monitoraggio",
+          "In aggiornamento",
+          "05/05/2026",
+          "Confrontare il calendario con quanto svolto"
+        ],
+        [
+          "Trame Sera",
+          "Comunicazione",
+          "Piano delle comunicazioni e registro delle attività",
+          "Da preparare",
+          "08/05/2026",
+          "Verificare che le attività siano tracciate"
+        ],
+        [
+          "Trame Sera",
+          "Rendicontazione",
+          "Elenco spese e prove di spesa",
+          "Da preparare",
+          "14/05/2026",
+          "Controllare che ogni spesa abbia una prova"
+        ]
+      ],
+      "form": [
+        "Progetto",
+        "Fase",
+        "Documento",
+        "Stato",
+        "Da completare entro",
+        "Controllo richiesto"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "prugna",
+    "fonts": "editoriale"
+  }
+}
