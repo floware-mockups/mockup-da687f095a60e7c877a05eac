@@ -302,6 +302,232 @@
         "Da completare entro",
         "Controllo richiesto"
       ]
+    },
+    {
+      "id": "decreto-presa-datto",
+      "title": "Decreto di presa d’atto",
+      "description": "Documento da modello: campi controllati, soglie, importi in lettere e testo che si aggiorna da solo. Dati di esempio inventati.",
+      "metrics": [],
+      "columns": [],
+      "rows": [],
+      "form": [],
+      "kind": "document",
+      "document": {
+        "fields": [
+          {
+            "key": "tipologia",
+            "label": "Tipologia",
+            "type": "choice",
+            "required": true,
+            "options": [
+              "forniture",
+              "servizi",
+              "lavori"
+            ]
+          },
+          {
+            "key": "oggetto",
+            "label": "Oggetto",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "fornitore",
+            "label": "Fornitore",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "partita_iva",
+            "label": "Partita IVA",
+            "type": "text",
+            "required": true,
+            "digits": 11
+          },
+          {
+            "key": "importo",
+            "label": "Importo netto in euro",
+            "type": "number",
+            "required": true,
+            "positive": true
+          },
+          {
+            "key": "sconto",
+            "label": "Sconto in percentuale",
+            "type": "percent",
+            "default": "0",
+            "min": 0,
+            "max": 99
+          },
+          {
+            "key": "capitolo",
+            "label": "Capitolo",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "cig",
+            "label": "Codice identificativo di gara",
+            "type": "text",
+            "required": true,
+            "length": 10
+          },
+          {
+            "key": "rup",
+            "label": "Responsabile del procedimento",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "responsabile",
+            "label": "Responsabile di Area",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "motivazione",
+            "label": "Motivazione",
+            "type": "long",
+            "ai": true,
+            "fallback": "L'acquisizione è necessaria per garantire il regolare funzionamento dei servizi comunali. Il fornitore {fornitore} è stato individuato dopo un'indagine informale di mercato. Il prezzo è congruo rispetto ai prezzi correnti. Il fornitore non è l'affidatario uscente, nel rispetto del principio di rotazione."
+          }
+        ],
+        "summary": {
+          "amount": "importo",
+          "discount": "sconto",
+          "vat": 22
+        },
+        "rules": [
+          {
+            "type": "threshold",
+            "value": "netto",
+            "atLeast": 140000,
+            "when": {
+              "field": "tipologia",
+              "in": [
+                "forniture",
+                "servizi"
+              ]
+            },
+            "level": "error",
+            "message": "Serve una procedura diversa: per forniture e servizi l'affidamento diretto è ammesso sotto i 140.000 euro (articolo 50, comma 1, lettera b), del decreto legislativo 31 marzo 2023, n. 36)."
+          },
+          {
+            "type": "threshold",
+            "value": "netto",
+            "atLeast": 150000,
+            "when": {
+              "field": "tipologia",
+              "in": [
+                "lavori"
+              ]
+            },
+            "level": "error",
+            "message": "Serve una procedura diversa: per i lavori l'affidamento diretto è ammesso sotto i 150.000 euro (articolo 50, comma 1, lettera a), del decreto legislativo 31 marzo 2023, n. 36)."
+          },
+          {
+            "type": "threshold",
+            "value": "netto",
+            "atLeast": 40000,
+            "level": "warning",
+            "message": "Importo pari o superiore a 40.000 euro: verifica la qualificazione della stazione appaltante e il rispetto della rotazione."
+          },
+          {
+            "type": "different",
+            "fields": [
+              "rup",
+              "responsabile"
+            ],
+            "level": "warning",
+            "message": "Il responsabile del procedimento coincide con il Responsabile di Area: verifica che sia una scelta voluta."
+          }
+        ],
+        "maps": [
+          {
+            "key": "area",
+            "from": "tipologia",
+            "values": {
+              "lavori": "Tecnica"
+            },
+            "otherwise": "Amministrativa"
+          },
+          {
+            "key": "lettera",
+            "from": "tipologia",
+            "values": {
+              "lavori": "a)"
+            },
+            "otherwise": "b)"
+          },
+          {
+            "key": "prestazione",
+            "from": "tipologia",
+            "values": {
+              "forniture": "la fornitura",
+              "servizi": "il servizio",
+              "lavori": "i lavori"
+            },
+            "otherwise": "la prestazione"
+          }
+        ],
+        "template": "COMUNE DI BORGOVERDE\nArea {area}\n\nDETERMINAZIONE N. {numero}/{anno}\n\nOGGETTO: {oggetto|maiuscolo}. AFFIDAMENTO DIRETTO A {fornitore|maiuscolo}. CODICE IDENTIFICATIVO DI GARA {cig|maiuscolo}.\n\nIL RESPONSABILE DI AREA\n\nVisti:\n- l'articolo 107 del decreto legislativo 18 agosto 2000, n. 267, sulle competenze dei dirigenti e dei responsabili;\n- l'articolo 183 del decreto legislativo 18 agosto 2000, n. 267, sull'impegno di spesa;\n- l'articolo 50, comma 1, lettera {lettera}, del decreto legislativo 31 marzo 2023, n. 36, sull'affidamento diretto;\n- il decreto sindacale di nomina del sottoscritto quale Responsabile di Area;\n\nPremesso che:\n{motivazione}\n\nDato atto che:\n- il responsabile del procedimento è {rup};\n- non sussistono situazioni di conflitto di interessi, anche potenziale, in capo al responsabile del procedimento e al sottoscritto;\n- la spesa trova copertura sul capitolo {capitolo} del bilancio di previsione in corso;\n\nDETERMINA\n\n1. di affidare a {fornitore}, partita IVA {partita_iva}, {prestazione} di cui in oggetto, per l'importo di {netto} oltre IVA al {aliquota}% di {iva}, per complessivi {totale} ({totale_lettere}){?sconto}, al netto dello sconto del {sconto}%{/sconto};\n2. di impegnare la somma di {totale} sul capitolo {capitolo} del bilancio di previsione in corso;\n3. di pubblicare il presente atto nella sezione Amministrazione trasparente, ai sensi del decreto legislativo 14 marzo 2013, n. 33, e del decreto legislativo 31 marzo 2023, n. 36.\n\nIl Responsabile di Area\n{responsabile}",
+        "generateLabel": "Genera la determina",
+        "aiFields": [
+          "tipologia",
+          "oggetto",
+          "fornitore"
+        ],
+        "examples": [
+          {
+            "label": "Presa d’atto della graduatoria del progetto Rete Lumo",
+            "values": {
+              "tipologia": "forniture",
+              "oggetto": "Fornitura di arredi per la biblioteca comunale",
+              "fornitore": "Bianchi Arredi Srl",
+              "partita_iva": "01234567890",
+              "importo": "4.800",
+              "sconto": "0",
+              "capitolo": "2030",
+              "cig": "B1A2C3D4E5",
+              "rup": "Laura Conti",
+              "responsabile": "Marco Verdi",
+              "motivazione": ""
+            }
+          },
+          {
+            "label": "Manutenzione verde",
+            "values": {
+              "tipologia": "servizi",
+              "oggetto": "Servizio di manutenzione del verde pubblico per l'anno 2027",
+              "fornitore": "Verde Pubblico Coop",
+              "partita_iva": "0987654321",
+              "importo": "38.000",
+              "sconto": "0",
+              "capitolo": "1090",
+              "cig": "B9Z8Y7X6W5",
+              "rup": "Paolo Marino",
+              "responsabile": "Paolo Marino",
+              "motivazione": ""
+            }
+          },
+          {
+            "label": "Servizio di pulizia",
+            "values": {
+              "tipologia": "servizi",
+              "oggetto": "Servizio di pulizia degli edifici comunali per il biennio 2027-2028",
+              "fornitore": "Pulito Spa",
+              "partita_iva": "11223344556",
+              "importo": "145.000",
+              "sconto": "0",
+              "capitolo": "1070",
+              "cig": "",
+              "rup": "Sara Gallo",
+              "responsabile": "Marco Verdi",
+              "motivazione": ""
+            }
+          }
+        ]
+      }
     }
   ],
   "theme": {
